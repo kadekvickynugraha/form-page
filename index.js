@@ -11,16 +11,17 @@ const ageValue = document.querySelector("#age-value");
 const fetchSection = document.querySelector(".fetch-section");
 const btnNewData = document.querySelector("#btn-reset");
 const helloMsg = document.querySelector("#hello-msg");
-
-// firstNameInput.addEventListener("input", () => {
-//   firstNameValue.innerHTML = firstNameInput.value;
-// });
+const symbols = /[!@#$%^&*()_+{}\[\]:;"'<>,.?/~`1234567890]/;
 
 function formValidation() {
   if (firstNameInput.value.trim() === "") {
     alertFnMsg.classList.remove("text-success");
     alertFnMsg.classList.add("text-danger");
     alertFnMsg.innerHTML = "First name cannot be empty";
+  } else if (symbols.test(firstNameInput.value)) {
+    alertFnMsg.classList.remove("text-success");
+    alertFnMsg.classList.add("text-danger");
+    alertFnMsg.innerHTML = "First name cannot contain numbers";
   } else {
     alertFnMsg.classList.remove("text-danger");
     alertFnMsg.classList.add("text-success");
@@ -30,6 +31,10 @@ function formValidation() {
     alertLnMsg.classList.remove("text-success");
     alertLnMsg.classList.add("text-danger");
     alertLnMsg.innerHTML = "Last name cannot be empty";
+  } else if (symbols.test(lastNameInput.value)) {
+    alertLnMsg.classList.remove("text-success");
+    alertLnMsg.classList.add("text-danger");
+    alertLnMsg.innerHTML = "Last name cannot contain numbers";
   } else {
     alertLnMsg.classList.remove("text-danger");
     alertLnMsg.classList.add("text-success");
