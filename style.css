@@ -1,0 +1,119 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,700);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(./img/charizard-pokemon-4k-wallpaper-uhdpaper.com-108@2@a.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+span {
+  width: 100%;
+  top: 10rem;
+}
+
+h1 {
+  color: white;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  background: transparent;
+  border: 2px solid grey;
+  color: white;
+  border-radius: 10px;
+}
+.container .form-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 20px;
+}
+.container .form-section .first-name {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.container .form-section .form-last-name {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.container .form-section .form-age {
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+.container .form-section .form-floating {
+  width: 100%;
+}
+.container .form-section .age {
+  display: flex;
+  flex-direction: row;
+}
+.container .form-section .age input {
+  margin: 0 1rem 0 0;
+}
+.container .fetch-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: opacity 0.15s ease;
+  background: transparent;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+.container .fetch-section .card-header {
+  background-color: rgb(89, 37, 37);
+}
+.container .fetch-section .card-header h1 {
+  font-size: 1rem;
+}
+.container .fetch-section .card-body {
+  height: 100%;
+  background-color: rgb(241, 191, 99);
+}
+.container .fetch-section .card-body .fetch-data-fn {
+  color: rgb(72, 16, 16);
+  display: flex;
+  justify-content: space-between;
+  text-align: justify;
+}
+
+@media screen and (min-width: 640px) {
+  .container {
+    width: 50%;
+  }
+  .fetch-section {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 940px) {
+  .container {
+    width: 30%;
+  }
+  .fetch-section {
+    width: 30%;
+  }
+}/*# sourceMappingURL=style.css.map */
