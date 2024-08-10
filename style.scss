@@ -63,38 +63,40 @@ h1 {
     .form-floating {
       width: 100%;
     }
-    .age {
-      display: flex;
-      flex-direction: row;
-      input {
-        margin: 0 1rem 0 0;
-      }
+    label {
+      margin: 5px;
+    }
+    input {
+      margin: 0 1rem 0 0;
+    }
+    #alert-fn {
+      color: red;
     }
   }
-  .fetch-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 1rem;
-    transition: opacity 0.15s ease;
-    background: transparent;
-    backdrop-filter: blur(20px);
-    .card-header {
-      background-color: rgb(89, 37, 37);
-      h1 {
-        font-size: 1rem;
-      }
+}
+.fetch-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: opacity 0.15s ease;
+  background: transparent;
+  backdrop-filter: blur(20px);
+  .card-header {
+    background-color: rgb(89, 37, 37);
+    h1 {
+      font-size: 1rem;
     }
-    .card-body {
-      height: 100%;
-      background-color: rgb(241, 191, 99);
-      .fetch-data-fn {
-        color: rgb(72, 16, 16);
-        display: flex;
-        justify-content: space-between;
-        text-align: justify;
-      }
+  }
+  .card-body {
+    height: 100%;
+    background-color: rgb(241, 191, 99);
+    .fetch-data-fn {
+      color: rgb(72, 16, 16);
+      display: flex;
+      justify-content: space-between;
+      text-align: justify;
     }
   }
 }

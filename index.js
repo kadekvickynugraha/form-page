@@ -12,12 +12,15 @@ const fetchSection = document.querySelector(".fetch-section");
 const btnNewData = document.querySelector("#btn-reset");
 const helloMsg = document.querySelector("#hello-msg");
 const symbols = /[!@#$%^&*()_+{}\[\]:;"'<>,.?/~`1234567890]/;
+const string = ["undefined", "number", "boolean", "null", "object"];
 
 function formValidation() {
   if (firstNameInput.value.trim() === "") {
     alertFnMsg.classList.remove("text-success");
     alertFnMsg.classList.add("text-danger");
     alertFnMsg.innerHTML = "First name cannot be empty";
+  } else if (string.includes(firstNameInput.value)) {
+    alertFnMsg.innerHTML = "Error Kids!";
   } else if (symbols.test(firstNameInput.value)) {
     alertFnMsg.classList.remove("text-success");
     alertFnMsg.classList.add("text-danger");
@@ -31,6 +34,8 @@ function formValidation() {
     alertLnMsg.classList.remove("text-success");
     alertLnMsg.classList.add("text-danger");
     alertLnMsg.innerHTML = "Last name cannot be empty";
+  } else if (string.includes(lastNameInput.value)) {
+    alertLnMsg.innerHTML = "Error Kids!";
   } else if (symbols.test(lastNameInput.value)) {
     alertLnMsg.classList.remove("text-success");
     alertLnMsg.classList.add("text-danger");
